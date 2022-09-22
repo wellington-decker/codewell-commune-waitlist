@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+@import "breakpoints";
+//colors
+$colors: (
+  background-main: hsl(169, 100%, 97%),
+  background-dark: hsl(168, 100%, 86%),
+  violet_: hsl(255, 43%, 28%),
+  white_: white,
+  gray_: rgb(132, 132, 132),
+  light-gray_: rgba(169, 169, 169, 0.824),
+);
+
+//border
+$base-border-radius-sm: 10px;
+$base-border-radius-lg: 50px;
+$base-border-thickness: 1px;
+
+//font
+$base-font-size: 1rem;
+$font-size-sm: 1rem * 0.75;
+$font-weight-light: 100;
+$font-weight-semibold: 600;
+$font-weight-superbold: 700;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#container {
+  // text-align: center;
+  width: 93%;
+  min-height: 70%;
+  min-width: 20rem;
+  max-width: 35rem;
+  margin: 2em auto;
+  padding: 3rem 1.5rem;
+  background: map-get($colors, background-main);
+  border-radius: $base-border-radius-sm;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 10px;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+main {
+  .dkt {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 2.25em 0;
+
+    .learn-more {
+      font-family: "Nunito Sans", sans-serif;
+      color: map-get($colors, white_);
+      background: map-get($colors, violet_);
+      width: 90%;
+      min-width: 18rem;
+      max-width: 23rem;
+      margin: 0 auto;
+      padding: 1.2rem;
+      border: 1px solid map-get($colors, violet_);
+      border-radius: $base-border-radius-lg;
+
+      a {
+        color: map-get($colors, white_);
+        text-decoration-color: map-get($colors, white_);
+      }
+    }
+
+    h1 {
+      color: map-get($colors, violet_);
+    }
+
+    p.heading_description {
+      color: map-get($colors, gray_);
+    }
+
+    .waitlist {
+      padding: 1rem 0rem;
+
+      form {
+        input {
+          font-size: $base-font-size;
+          font-family: "Nunito Sans", sans-serif;
+          width: 100%;
+          min-width: 17rem;
+          max-width: 22rem;
+          padding: 1rem 0.75rem;
+          outline: none;
+          border: 1px solid map-get($colors, light-gray_);
+          border-radius: 5px;
+        }
+      }
+
+      .waitlist-btn {
+        font-size: $base-font-size;
+        font-family: "Nunito Sans", sans-serif;
+        font-weight: $font-weight-semibold;
+        color: map-get($colors, white_);
+        background: map-get($colors, violet_);
+        width: 100%;
+        min-width: 17rem;
+        max-width: 22rem;
+        margin: 0.5rem auto;
+        padding: 1rem 0 1rem;
+        border: 1px solid map-get($colors, violet_);
+        border-radius: 5px;
+        outline: none;
+      }
+    }
+
+    .suprted-by {
+      .suprt-headn-text {
+        text-align: left;
+        color: map-get($colors, gray_);
+        font-weight: $font-weight-semibold;
+        margin: 0.5rem 0 1rem;
+      }
+
+      .suprted-brands {
+        display: flex;
+        flex-wrap: wrap;
+        // padding: 0 1rem;
+        align-items: center;
+        gap: 1.75rem;
+      }
+    }
+  }
+  
+  .desktop-image {
+    display: none;
+  }
+}
+
+
+@include tablet {
+  #container {
+    width: 95%;
+    min-width: 650px;
+    max-width: 700px;
+  }
+
+  main {
+    .dkt {
+      padding: 2rem 4rem;
+
+      .learn-more {
+        color: map-get($colors, white_);
+        text-align: center;
+        width: 90%;
+        min-width: 31rem;
+        max-width: 33rem;
+        margin: 0 auto;
+        padding: 0.55rem;
+      }      
+
+      .waitlist {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0 auto;
+
+        form {
+          input {
+            min-width: 17rem;
+            max-width: 20rem;
+            padding: 1rem 0.75rem;
+          }
+        }
+
+        .waitlist-btn {
+          width: 20%;
+          min-width: 9rem;
+          max-width: 13rem;
+          margin: 0;
+          background: map-get($colors, violet_);
+          padding: 1.2rem 0;
+        }
+      }
+
+      .suprted-by {
+        .suprted-brands {
+          gap: 1rem;
+        }
+      }
+    }
+
+  }
+}
+
+@include desktop {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  #container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 4rem;
+
+    header {
+      margin-bottom: 3rem;
+
+      .menu-icon {
+        display: none;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          width: 70%;
+          min-width: 60%;
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            font-size: $base-font-size;
+            letter-spacing: 0.05rem;
+            color: map-get($colors, gray_);
+          }
+        }
+
+        button {
+          font-size: $base-font-size;
+          font-family: "Nunito Sans", sans-serif;
+          font-weight: $font-weight-semibold;
+          color: map-get($colors, white_);
+          letter-spacing: 0.05rem;
+          background: map-get($colors, violet_);
+          width: 25%;
+          padding: 1rem 0 1rem;
+          border: 1px solid map-get($colors, violet_);
+          border-radius: 5px;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .dkt {
+      text-align: left;
+      width: 60%;
+      margin: 1em 0;
+      padding: 3rem;
+
+      .learn-more {
+        text-align: center;
+        color: map-get($colors, white_);
+        width: 100%;
+        max-width: 30rem;
+        margin: 0;
+        padding: 0.55rem;
+        min-width: none;
+      }
+
+      .waitlist {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0;
+
+
+        .waitlist-btn {
+          color: map-get($colors, white_);
+          width: 20%;
+          min-width: 9rem;
+          max-width: 13rem;
+          margin: 0;
+          background: map-get($colors, violet_);
+          padding: 1.2rem 0;
+        }
+      }
+
+      .suprted-by {
+        .suprted-brands {
+          gap: 1rem;
+        }
+      }
+    }
+
+    .desktop-image {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      img {
+        display: flex;
+        width: 65%;
+        max-width: 100%;
+        vertical-align: top;
+      }
+    } 
+  }
+}

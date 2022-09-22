@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#container {
+  width: 93%;
+  min-height: 70%;
+  min-width: 20rem;
+  max-width: 35rem;
+  margin: 2em auto;
+  padding: 3rem 1.5rem;
+  background: hsl(169deg, 100%, 97%);
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 10px;
+}
+header nav {
+  display: none;
+}
+
+main .dkt {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2.25em 0;
+}
+main .dkt .learn-more {
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  background: hsl(255deg, 43%, 28%);
+  width: 90%;
+  min-width: 18rem;
+  max-width: 23rem;
+  margin: 0 auto;
+  padding: 1.2rem;
+  border: 1px solid hsl(255deg, 43%, 28%);
+  border-radius: 50px;
+}
+main .dkt .learn-more a {
+  color: white;
+  text-decoration-color: white;
+}
+main .dkt h1 {
+  color: hsl(255deg, 43%, 28%);
+}
+main .dkt p.heading_description {
+  color: rgb(132, 132, 132);
+}
+main .dkt .waitlist {
+  padding: 1rem 0rem;
+}
+main .dkt .waitlist form input {
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+  min-width: 17rem;
+  max-width: 22rem;
+  padding: 1rem 0.75rem;
+  outline: none;
+  border: 1px solid rgba(169, 169, 169, 0.824);
+  border-radius: 5px;
+}
+main .dkt .waitlist .waitlist-btn {
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  color: white;
+  background: hsl(255deg, 43%, 28%);
+  width: 100%;
+  min-width: 17rem;
+  max-width: 22rem;
+  margin: 0.5rem auto;
+  padding: 1rem 0 1rem;
+  border: 1px solid hsl(255deg, 43%, 28%);
+  border-radius: 5px;
+  outline: none;
+}
+main .dkt .suprted-by .suprt-headn-text {
+  text-align: left;
+  color: rgb(132, 132, 132);
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+}
+main .dkt .suprted-by .suprted-brands {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.75rem;
+}
+main .desktop-image {
+  display: none;
+}
+
+@media (min-width: 668px) {
+  #container {
+    width: 95%;
+    min-width: 650px;
+    max-width: 700px;
+  }
+  main .dkt {
+    padding: 2rem 4rem;
+  }
+  main .dkt .learn-more {
+    color: white;
+    text-align: center;
+    width: 90%;
+    min-width: 31rem;
+    max-width: 33rem;
+    margin: 0 auto;
+    padding: 0.55rem;
+  }
+  main .dkt .waitlist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 auto;
+  }
+  main .dkt .waitlist form input {
+    min-width: 17rem;
+    max-width: 20rem;
+    padding: 1rem 0.75rem;
+  }
+  main .dkt .waitlist .waitlist-btn {
+    width: 20%;
+    min-width: 9rem;
+    max-width: 13rem;
+    margin: 0;
+    background: hsl(255deg, 43%, 28%);
+    padding: 1.2rem 0;
+  }
+  main .dkt .suprted-by .suprted-brands {
+    gap: 1rem;
+  }
+}
+@media (min-width: 1204px) {
+  #container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 4rem;
+  }
+  #container header {
+    margin-bottom: 3rem;
+  }
+  #container header .menu-icon {
+    display: none;
+  }
+  #container header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  #container header nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    min-width: 60%;
+    list-style: none;
+  }
+  #container header nav ul a {
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    color: rgb(132, 132, 132);
+  }
+  #container header nav button {
+    font-size: 1rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.05rem;
+    background: hsl(255deg, 43%, 28%);
+    width: 25%;
+    padding: 1rem 0 1rem;
+    border: 1px solid hsl(255deg, 43%, 28%);
+    border-radius: 5px;
+    outline: none;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .dkt {
+    text-align: left;
+    width: 60%;
+    margin: 1em 0;
+    padding: 3rem;
+  }
+  main .dkt .learn-more {
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0;
+    padding: 0.55rem;
+    min-width: none;
+  }
+  main .dkt .waitlist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+  }
+  main .dkt .waitlist .waitlist-btn {
+    color: white;
+    width: 20%;
+    min-width: 9rem;
+    max-width: 13rem;
+    margin: 0;
+    background: hsl(255deg, 43%, 28%);
+    padding: 1.2rem 0;
+  }
+  main .dkt .suprted-by .suprted-brands {
+    gap: 1rem;
+  }
+  main .desktop-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  main .desktop-image img {
+    display: flex;
+    width: 65%;
+    max-width: 100%;
+    vertical-align: top;
+  }
+}

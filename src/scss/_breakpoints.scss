@@ -1,0 +1,25 @@
+$breakpoint: (
+  "mb": 668px,
+  "desktop": 1204px,
+);
+
+@mixin tablet {
+  @media (min-width: map-get($breakpoint, mb)) {
+    @content;
+  }
+}
+
+//ANOTHER WAY OF WRITING RESPONSIVENESS.
+
+// @mixin breakpoint ($bp: 0) {
+//     @media (min-width: $bp) {
+//         @content;
+//     }
+
+// }
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoint, desktop)) {
+    @content;
+  }
+}
