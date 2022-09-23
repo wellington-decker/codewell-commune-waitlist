@@ -20,28 +20,102 @@ body {
   background: hsl(169deg, 100%, 97%);
   border-radius: 10px;
 }
-
-header {
+#container header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .logo {
+#container header .logo {
   width: 10px;
 }
-header nav {
+#container header nav {
   display: none;
 }
-
-main .dkt {
+#container header .ph-list {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 0%);
+}
+#container .overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(139, 139, 139, 0.886);
+  width: 100vw;
+  min-height: 170vh;
+  transition: all ease-in 1s;
+}
+#container .overlay.show {
+  display: block;
+}
+#container .mobile-nav__container {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  top: -1000px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 80%;
+  height: 70%;
+  padding: 1rem;
+  transition: opacity ease-out 2s;
+  background: hsla(255deg, 43%, 28%, 0.916);
+  border-radius: 10px;
+}
+#container .mobile-nav__container.open {
+  opacity: 1;
+  top: 120px;
+}
+#container .mobile-nav__container .mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#container .mobile-nav__container .mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  list-style-type: none;
+  margin-top: 1em;
+}
+#container .mobile-nav__container .mobile-nav ul li a {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+}
+#container .mobile-nav__container .ph-x-circle-light {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
+}
+#container .mobile-nav__waitbtn {
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  color: hsla(255deg, 43%, 28%, 0.916);
+  width: 20%;
+  min-width: 9rem;
+  max-width: 12rem;
+  margin: 0.5rem auto;
+  padding: 1rem 0 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+#container main .dkt {
   display: flex;
   flex-direction: column;
   gap: 1em;
   margin: 2.25em 0;
 }
-main .dkt .learn-more {
+#container main .dkt .learn-more {
   font-family: "Nunito Sans", sans-serif;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   background: hsl(255deg, 43%, 28%);
   width: 90%;
   min-width: 18rem;
@@ -51,20 +125,20 @@ main .dkt .learn-more {
   border: 1px solid hsl(255deg, 43%, 28%);
   border-radius: 50px;
 }
-main .dkt .learn-more a {
-  color: white;
-  text-decoration-color: white;
+#container main .dkt .learn-more a {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration-color: hsl(0deg, 0%, 100%);
 }
-main .dkt h1 {
+#container main .dkt h1 {
   color: hsl(255deg, 43%, 28%);
 }
-main .dkt p.heading_description {
+#container main .dkt p.heading_description {
   color: rgb(132, 132, 132);
 }
-main .dkt .waitlist {
+#container main .dkt .waitlist {
   padding: 1rem 0rem;
 }
-main .dkt .waitlist form input {
+#container main .dkt .waitlist form input {
   font-size: 1rem;
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
@@ -75,11 +149,11 @@ main .dkt .waitlist form input {
   border: 1px solid rgba(169, 169, 169, 0.824);
   border-radius: 5px;
 }
-main .dkt .waitlist .waitlist-btn {
+#container main .dkt .waitlist .waitlist-btn {
   font-size: 1rem;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   background: hsl(255deg, 43%, 28%);
   width: 100%;
   min-width: 17rem;
@@ -90,19 +164,19 @@ main .dkt .waitlist .waitlist-btn {
   border-radius: 5px;
   outline: none;
 }
-main .dkt .suprted-by .suprt-headn-text {
+#container main .dkt .suprted-by .suprt-headn-text {
   text-align: left;
   color: rgb(132, 132, 132);
   font-weight: 600;
   margin: 0.5rem 0 1rem;
 }
-main .dkt .suprted-by .suprted-brands {
+#container main .dkt .suprted-by .suprted-brands {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 1.75rem;
 }
-main .desktop-image {
+#container main .desktop-image {
   display: none;
 }
 
@@ -112,11 +186,11 @@ main .desktop-image {
     min-width: 650px;
     max-width: 700px;
   }
-  main .dkt {
+  #container main .dkt {
     padding: 2rem 4rem;
   }
-  main .dkt .learn-more {
-    color: white;
+  #container main .dkt .learn-more {
+    color: hsl(0deg, 0%, 100%);
     text-align: center;
     width: 90%;
     min-width: 31rem;
@@ -124,19 +198,19 @@ main .desktop-image {
     margin: 0 auto;
     padding: 0.55rem;
   }
-  main .dkt .waitlist {
+  #container main .dkt .waitlist {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
     margin: 0 auto;
   }
-  main .dkt .waitlist form input {
+  #container main .dkt .waitlist form input {
     min-width: 17rem;
     max-width: 20rem;
     padding: 1rem 0.75rem;
   }
-  main .dkt .waitlist .waitlist-btn {
+  #container main .dkt .waitlist .waitlist-btn {
     width: 20%;
     min-width: 9rem;
     max-width: 13rem;
@@ -144,7 +218,7 @@ main .desktop-image {
     background: hsl(255deg, 43%, 28%);
     padding: 1.2rem 0;
   }
-  main .dkt .suprted-by .suprted-brands {
+  #container main .dkt .suprted-by .suprted-brands {
     gap: 1rem;
   }
 }
@@ -179,11 +253,17 @@ main .desktop-image {
     letter-spacing: 0.05rem;
     color: rgb(132, 132, 132);
   }
+  #container header nav ul a:hover {
+    text-decoration: underline;
+    color: hsl(0deg, 0%, 0%);
+    cursor: pointer;
+    font-weight: bold;
+  }
   #container header nav button {
     font-size: 1rem;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 600;
-    color: white;
+    color: hsl(0deg, 0%, 100%);
     letter-spacing: 0.05rem;
     background: hsl(255deg, 43%, 28%);
     width: 25%;
@@ -192,35 +272,49 @@ main .desktop-image {
     border-radius: 5px;
     outline: none;
   }
-  main {
+  #container header nav button:hover {
+    background: hsla(255deg, 43%, 28%, 0.916);
+    cursor: pointer;
+  }
+  #container .mobile-nav__container {
+    display: none;
+  }
+  #container main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  main .dkt {
+  #container main .dkt {
     text-align: left;
     width: 60%;
     margin: 1em 0;
     padding: 3rem;
   }
-  main .dkt .learn-more {
+  #container main .dkt .learn-more {
     text-align: center;
-    color: white;
+    color: hsl(0deg, 0%, 100%);
     width: 100%;
     max-width: 30rem;
     margin: 0;
     padding: 0.55rem;
     min-width: none;
   }
-  main .dkt .waitlist {
+  #container main .dkt .learn-more p a:hover {
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #container main .dkt .waitlist {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
     margin: 0;
   }
-  main .dkt .waitlist .waitlist-btn {
-    color: white;
+  #container main .dkt .waitlist form input:hover {
+    cursor: pointer;
+  }
+  #container main .dkt .waitlist .waitlist-btn {
+    color: hsl(0deg, 0%, 100%);
     width: 20%;
     min-width: 9rem;
     max-width: 13rem;
@@ -228,15 +322,19 @@ main .desktop-image {
     background: hsl(255deg, 43%, 28%);
     padding: 1.2rem 0;
   }
-  main .dkt .suprted-by .suprted-brands {
+  #container main .dkt .waitlist .waitlist-btn:hover {
+    background: hsla(255deg, 43%, 28%, 0.916);
+    cursor: pointer;
+  }
+  #container main .dkt .suprted-by .suprted-brands {
     gap: 1rem;
   }
-  main .desktop-image {
+  #container main .desktop-image {
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
-  main .desktop-image img {
+  #container main .desktop-image img {
     display: flex;
     width: 65%;
     max-width: 100%;

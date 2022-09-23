@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="src/css/scss/styles.css"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="src/css/scss/styles.css" />
     <title>Commune Landing Page</title>
-    
   </head>
   <body>
     <div id="container">
@@ -25,72 +24,84 @@
           <button type="button" class="nav-wailist">Join Waitlist</button>
         </nav>
         <div class="menu-icon">
-          <img
+          <!-- <img
             src="utilities/Hamburger Menu.svg"
             alt="hamburger icon"
-          />
+            class="menu-btn"
+          /> -->
+          <i class="ph-list menu-btn"></i>
         </div>
-      </header> 
+      </header>
+      <div class="overlay"></div>
+
+      <div class="mobile-nav__container">
+        <!-- <i class="ph-x-square-light"></i> -->
+        <div class="mobile-nav">
+          <ul class="mobile-nav__items">
+            <li class="mobile-nav__item"><a href="#">Features</a></li>
+            <li class="mobile-nav__item"><a href="#">Affiliates</a></li>
+            <li class="mobile-nav__item"><a href="#">Pricing</a></li>
+            <li class="mobile-nav__item"><a href="#">Communities</a></li>
+          </ul>
+          <button type="button" class="mobile-nav__waitbtn">
+            Join Waitlist
+          </button>
+        </div>
+
+        <i class="ph-x-circle-light"></i>
+      </div>
 
       <main>
         <div class="dkt">
           <div class="learn-more">
-            <p>We are now allowing early-access for users. <a href="#">Learn more.</a></p>
+            <p>
+              We are now allowing early-access for users.
+              <a href="#">Learn more.</a>
+            </p>
           </div>
-          <h1 class="heading">Build a highly engaged community with no effort.</h1>
+          <h1 class="heading">
+            Build a highly engaged community with no effort.
+          </h1>
           <p class="heading_description">
             Commune offers the tools you need to build a hihly engaged community
             with little to no effort. Simply setup your Commune workspace, and
-            manage everything from members to content from one central dashboard.
+            manage everything from members to content from one central
+            dashboard.
           </p>
-  
+
           <section class="waitlist">
             <form action="#">
-              <input type="email" name="waitlist" id="waitlist-input" placeholder="Enter your email address">
+              <input
+                type="email"
+                name="waitlist"
+                id="waitlist-input"
+                placeholder="Enter your email address"
+              />
             </form>
             <button type="button" class="waitlist-btn">Join Waitlist</button>
           </section>
-  
+
           <section class="suprted-by">
             <p class="suprt-headn-text">Used by these companies:</p>
             <div class="suprted-brands">
-              <img
-                src="utilities/Atlassian Icon.svg"
-                alt="Atlassian Icon"
-              />
-              <img
-                src="utilities/Behance Icon.svg"
-                alt="Behance Icon"
-              />
-              <img
-                src="utilities/Bing Icon.svg"
-                alt="Bing Icon"
-              />
-              <img
-                src="utilities/Bitbucket Icon.svg"
-                alt="Bitbucket Icon"
-              />
-              <img
-                src="utilities/Dropbox Icon.svg"
-                alt="Dropbox Icon"
-              />
-              <img
-                src="utilities/Twitch Icon.svg"
-                alt="Twitch Icon"
-              />
-              <img
-                src="utilities/Twitter Icon.svg"
-                alt="Twitter Icon"
-              />
+              <img src="utilities/Atlassian Icon.svg" alt="Atlassian Icon" />
+              <img src="utilities/Behance Icon.svg" alt="Behance Icon" />
+              <img src="utilities/Bing Icon.svg" alt="Bing Icon" />
+              <img src="utilities/Bitbucket Icon.svg" alt="Bitbucket Icon" />
+              <img src="utilities/Dropbox Icon.svg" alt="Dropbox Icon" />
+              <img src="utilities/Twitch Icon.svg" alt="Twitch Icon" />
+              <img src="utilities/Twitter Icon.svg" alt="Twitter Icon" />
             </div>
           </section>
         </div>
 
         <section class="desktop-image no-show">
-          <img src="utilities/Illustration.png" alt="an Illustration">
+          <img src="utilities/Illustration.png" alt="an Illustration" />
         </section>
-      </main>     
+      </main>
     </div>
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="src/js/script.js"></script>
   </body>
 </html>
-  
